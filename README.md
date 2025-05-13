@@ -36,6 +36,3 @@ https://github.com/coolsnowwolf/luci/tree/master/applications/luci-app-accesscon
 ![](./images/20220427153138.png)
 
 感谢您的支持，遇到问题可以反馈
-
-<img height="128" src="./images/zanwechat.png" width="128"/>
-<img height="128" src="./images/zanali.png" width="128"/>
