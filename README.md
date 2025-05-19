@@ -31,8 +31,8 @@ https://github.com/coolsnowwolf/luci/tree/master/applications/luci-app-accesscon
 
 软件安全无毒，请放心下载使用
 
-![](./images/20220427153155.png)
-![](./images/20220427153150.png)
-![](./images/20220427153138.png)
+![](./images/screenshot_19-5-2025_82421.jpeg)
+![](./images/screenshot_19-5-2025_82438.jpeg)
+![](./images/screenshot_19-5-2025_82457.jpeg)
 
 感谢您的支持，遇到问题可以反馈
