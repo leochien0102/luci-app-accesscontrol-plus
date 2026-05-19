@@ -1,4 +1,5 @@
 a = Map("miaplus")
+a.apply_on_parse = true
 
 local section = arg[1]
 

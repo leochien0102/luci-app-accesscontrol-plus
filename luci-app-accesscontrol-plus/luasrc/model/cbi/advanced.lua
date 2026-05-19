@@ -1,6 +1,7 @@
 local ds = require "luci.dispatcher"
 
 a = Map("miaplus")
+a.apply_on_parse = true
 
 t = a:section(TypedSection, "templates")
 t.template = "cbi/tblsection"

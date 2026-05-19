@@ -3,6 +3,7 @@ local uci = luci.model.uci.cursor()
 a = Map("miaplus")
 a.title = translate("Internet Access Schedule Control Plus")
 a.description = translate("Access Schedule Control Description")
+a.apply_on_parse = true
 
 a:section(SimpleSection).template = "miaplus/miaplus_status"
 
