@@ -10,6 +10,8 @@ START=30
 
 CONFIG=miaplus
 
+. /lib/functions.sh
+
 uci_export_section_name() {
   local ret=$(uci -n export $CONFIG | grep "config $1" | awk '{print $3}' | awk -F\' '{print $2}')
   echo ${ret:=$2}
@@ -50,20 +52,15 @@ uci_get_mac_by_template(){
 }
 
 add_rules(){
-  local sections=$(uci_export_section_name templates '')
-  if [ -n "$sections" ]; then
-    for s in $sections
-    do
-      local enable=$(uci_get_by_name $s enable '' $i)
-      local title=$(uci_get_by_name $s title '' $i)
-      if [ -z $enable ]; then
-        break
-      fi
-      if [ "$enable" == "1" ]; then
-        add_rule $s
-      fi
-    done
-  fi
+  config_load "$CONFIG"
+  config_foreach add_template_rule templates
+}
+add_template_rule(){
+  local section="$1"
+  local enable
+
+  config_get enable "$section" enable 0
+  [ "$enable" = "1" ] && add_rule "$section"
 }
 add_rule(){
   ipv6enable=$(uci get miaplus.@basic[0].ipv6enable)
