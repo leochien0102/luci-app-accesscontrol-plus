@@ -1,0 +1,20 @@
+# OpenWrt 插件包：在 Windows checkout(Build 环境有 core.autocrlf=true)下
+# 确保脚本/源码用 LF，避免 shebang / 文本文件被注入 \r 导致不可执行或解析失败。
+# text=auto eol=lf：仓库内全部文本文件统一 LF，杜绝 checkout 时按 autocrlf 转 CRLF。
+* text=auto eol=lf
+
+# 显式再锁一遍脚本类(无扩展名 shell 也覆盖)
+*.sh       text eol=lf
+*.lua      text eol=lf
+*.htm      text eol=lf
+*.html     text eol=lf
+*.uc       text eol=lf
+*.json     text eol=lf
+*.po       text eol=lf
+*.mk       text eol=lf
+Makefile   text eol=lf
+luci-app-accesscontrol-plus/root/etc/init.d/* text eol=lf
+luci-app-accesscontrol-plus/root/etc/uci-defaults/* text eol=lf
+luci-app-accesscontrol-plus/root/etc/*.include text eol=lf
+luci-app-accesscontrol-plus/root/etc/config/* text eol=lf
+
